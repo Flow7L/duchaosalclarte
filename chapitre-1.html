@@ -4,220 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapitre 1 : L'Héritage des Silences | Du Chaos à la Clarté</title>
-    <meta name="description" content="Chapitre 1 : L'histoire de Flo commence. Né en 1997, premier amour à 14 ans, les fondations d'une vie que je croyais indestructible.">
+    <meta name="description" content="Né en 1997, fratrie de quatre garçons, premier amour à 14 ans.">
     <meta name="google-adsense-account" content="ca-pub-9862184570673107">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862184570673107"
-     crossorigin="anonymous"></script>
-    <style>
-        :root {
-            --primary-dark: #1a1a1a;
-            --primary-light: #f8f7f4;
-            --accent-gold: #c9a961;
-            --accent-rust: #a85741;
-            --text-dark: #2d2d2d;
-            --text-muted: #6b6b6b;
-            --border-subtle: #e5e3dd;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Crimson Pro', serif;
-            background: var(--primary-light);
-            color: var(--text-dark);
-            line-height: 1.8;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(248, 247, 244, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-subtle);
-            z-index: 1000;
-            padding: 1.5rem 2rem;
-        }
-
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--primary-dark);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-rust);
-        }
-
-        .chapter-container {
-            max-width: 800px;
-            margin: 120px auto 4rem;
-            padding: 0 2rem;
-        }
-
-        .chapter-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .chapter-number {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: var(--accent-gold);
-            font-weight: 600;
-            letter-spacing: 2px;
-            margin-bottom: 1rem;
-        }
-
-        .chapter-title {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: var(--primary-dark);
-            line-height: 1.2;
-        }
-
-        .chapter-content {
-            font-size: 1.25rem;
-            line-height: 2;
-            color: var(--text-dark);
-        }
-
-        .chapter-content p {
-            margin-bottom: 2rem;
-        }
-
-        .chapter-content p:first-letter {
-            font-size: 3.5rem;
-            font-weight: 700;
-            float: left;
-            line-height: 0.8;
-            margin: 0.1em 0.1em 0 0;
-            color: var(--accent-rust);
-        }
-
-        /* AdSense Placeholder */
-        .ad-placeholder {
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
-            padding: 3rem 2rem;
-            text-align: center;
-            margin: 3rem 0;
-            font-family: 'Inter', sans-serif;
-            color: #888;
-        }
-
-        /* Navigation Buttons */
-        .chapter-navigation {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 5rem;
-            padding-top: 3rem;
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .nav-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: var(--accent-rust);
-            color: white;
-            text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-
-        .nav-button:hover {
-            background: var(--primary-dark);
-            transform: translateX(5px);
-        }
-
-        .nav-button.prev:hover {
-            transform: translateX(-5px);
-        }
-
-        .nav-button.disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
-        footer {
-            background: var(--primary-dark);
-            color: var(--primary-light);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            opacity: 0.7;
-        }
-
-        @media (max-width: 768px) {
-            nav .nav-links {
-                display: none;
-            }
-
-            .chapter-container {
-                margin-top: 100px;
-                padding: 0 1.5rem;
-            }
-
-            .chapter-content {
-                font-size: 1.1rem;
-            }
-
-            .chapter-navigation {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .nav-button {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862184570673107" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
@@ -225,12 +18,12 @@
             <a href="index.html" class="logo">DU CHAOS À LA CLARTÉ</a>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="index.html#chapters">Chapitres</a></li>
+                <li><a href="index.html#chapitres">Chapitres</a></li>
             </ul>
         </div>
     </nav>
 
-    <article class="chapter-container">
+    <article>
         <header class="chapter-header">
             <div class="chapter-number">CHAPITRE 1</div>
             <h1 class="chapter-title">L'Héritage des Silences</h1>
@@ -241,8 +34,7 @@
 
             <p>Je suis né en 1997, au sein d'une fratrie de quatre garçons. Mes parents, mariés depuis trois décennies, m'ont offert un modèle de solidité. Chez nous, l'amour ne se cachait pas, mais les crises non plus. J'ai appris très tôt qu'un couple n'est pas un long fleuve tranquille, mais un navire qu'on répare en pleine tempête.</p>
 
-            <!-- AdSense Placement - In-Article -->
-            <div style="text-align: center; margin: 3rem 0;">
+            <div class="ad-section">
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-format="autorelaxed"
@@ -257,17 +49,12 @@
         </div>
 
         <nav class="chapter-navigation">
-            <a href="index.html" class="nav-button prev">
-                ← Retour à l'accueil
-            </a>
-            <a href="chapitre-2.html" class="nav-button">
-                Chapitre suivant →
-            </a>
+            <a href="index.html" class="nav-button">← Retour à l'accueil</a>
+            <a href="chapitre-2.html" class="nav-button">Chapitre suivant →</a>
         </nav>
     </article>
 
-    <!-- AdSense Placement - Fin de page -->
-    <div style=" max-width: 800px; margin: 3rem auto; background: transparent; border: none; padding: 0;">
+    <div class="ad-section">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-9862184570673107"
@@ -280,7 +67,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Du Chaos à la Clarté - Flo | Tous droits réservés</p>
+        <p>&copy; 2026 Du Chaos à la Clarté - Flo</p>
     </footer>
 </body>
 </html>
