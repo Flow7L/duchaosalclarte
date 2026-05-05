@@ -35,7 +35,6 @@
             line-height: 1.8;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -92,14 +91,12 @@
             color: var(--rouge-braise);
         }
 
-        /* Chapter Container */
         .chapter-wrapper {
             max-width: 900px;
             margin: 0 auto;
-            padding: 140px 2rem 4rem;
+            padding: 140px 2rem 2rem;
         }
 
-        /* Chapter Header */
         .chapter-header {
             text-align: center;
             margin-bottom: 4rem;
@@ -126,11 +123,11 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Chapter Content */
         .chapter-content {
             font-size: 1.2rem;
             line-height: 2;
             color: var(--gris-pierre);
+            margin-bottom: 4rem;
         }
 
         .chapter-content p {
@@ -148,13 +145,16 @@
             color: var(--rouge-braise);
         }
 
-        /* NAVIGATION ENTRE CHAPITRES - TRÈS VISIBLE */
+        /* BOUTONS DE NAVIGATION - SECTION AU-DESSUS DU FOOTER */
         .chapter-navigation {
-            margin-top: 6rem;
-            padding: 4rem 0;
+            background: linear-gradient(135deg, rgba(184, 147, 95, 0.08) 0%, rgba(139, 58, 58, 0.08) 100%);
+            padding: 5rem 2rem;
             border-top: 3px solid var(--beige-papier);
-            border-bottom: 3px solid var(--beige-papier);
-            background: linear-gradient(135deg, rgba(184, 147, 95, 0.05) 0%, rgba(139, 58, 58, 0.05) 100%);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .nav-title {
@@ -240,23 +240,11 @@
             transition: color 0.3s ease;
         }
 
-        .nav-btn.disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
-        .nav-btn.full-width {
-            grid-column: 1 / -1;
-        }
-
-        /* Footer */
         footer {
             background: var(--noir-profond);
             color: var(--blanc-casse);
             padding: 3rem 2rem;
             text-align: center;
-            margin-top: 4rem;
         }
 
         .footer-text {
@@ -265,7 +253,6 @@
             opacity: 0.7;
         }
 
-        /* Mobile */
         @media (max-width: 768px) {
             nav .container {
                 padding: 0 1.5rem;
@@ -280,7 +267,7 @@
             }
 
             .chapter-wrapper {
-                padding: 120px 1.5rem 3rem;
+                padding: 120px 1.5rem 1.5rem;
             }
 
             .chapter-content {
@@ -343,23 +330,10 @@
             <p>L'amour m'a frappé à 14 ans. Elle vivait à 80 kilomètres. C'était l'époque des billets de train et des attentes interminables. Ma mère m'avait mis un marché en main : pour voir l'élue de mon cœur, mes notes devaient suivre. J'avais des facilités, mais c'est pour elle que j'ai appris la discipline. Nous avons traversé notre première épreuve au lycée : une rumeur d'infidélité infondée qui aurait pu nous briser. Nous avons survécu, soudés par une douleur précoce.</p>
         </div>
 
-        <!-- NAVIGATION ENTRE CHAPITRES -->
-        <nav class="chapter-navigation">
-            <h2 class="nav-title">Continuer la lecture</h2>
-            <div class="nav-buttons">
-                <a href="index.html" class="nav-btn">
-                    <div class="nav-btn-label">← Retour</div>
-                    <div class="nav-btn-title">Accueil</div>
-                </a>
-                <a href="chapitre-2.html" class="nav-btn">
-                    <div class="nav-btn-label">Chapitre suivant →</div>
-                    <div class="nav-btn-title">Les Sommets et les Mirages</div>
-                </a>
-            </div>
-        </nav>
+        </div>
     </article>
 
-    <!-- AdSense Fin de page -->
+    <!-- AdSense Fin de contenu -->
     <div style="max-width: 800px; margin: 3rem auto; padding: 0 2rem;">
         <ins class="adsbygoogle"
              style="display:block"
@@ -371,6 +345,23 @@
              (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+
+    <!-- BOUTONS DE NAVIGATION - AU-DESSUS DU FOOTER -->
+    <section class="chapter-navigation">
+        <div class="nav-container">
+            <h2 class="nav-title">Continuer la lecture</h2>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">
+                    <div class="nav-btn-label">← Retour</div>
+                    <div class="nav-btn-title">Accueil</div>
+                </a>
+                <a href="chapitre-2.html" class="nav-btn">
+                    <div class="nav-btn-label">Chapitre suivant →</div>
+                    <div class="nav-btn-title">Les Sommets et les Mirages</div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <p class="footer-text">&copy; 2026 Du Chaos à la Clarté - Flo | Tous droits réservés</p>

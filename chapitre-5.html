@@ -20,16 +20,17 @@
         .nav-links{display:flex;gap:2rem;list-style:none}
         .nav-links a{color:var(--gris-pierre);text-decoration:none;font-family:'Montserrat',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;transition:color 0.3s ease}
         .nav-links a:hover{color:var(--rouge-braise)}
-        .chapter-wrapper{max-width:900px;margin:0 auto;padding:140px 2rem 4rem}
+        .chapter-wrapper{max-width:900px;margin:0 auto;padding:140px 2rem 2rem}
         .chapter-header{text-align:center;margin-bottom:4rem;padding-bottom:3rem;border-bottom:3px solid var(--beige-papier)}
         .chapter-number{font-family:'Montserrat',sans-serif;font-size:0.85rem;letter-spacing:3px;color:var(--or-ancien);text-transform:uppercase;font-weight:700;margin-bottom:1.5rem}
         .chapter-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:var(--noir-profond);line-height:1.2}
-        .chapter-content{font-size:1.2rem;line-height:2;color:var(--gris-pierre)}
+        .chapter-content{font-size:1.2rem;line-height:2;color:var(--gris-pierre);margin-bottom:4rem}
         .chapter-content p{margin-bottom:2.5rem;text-align:justify}
         .chapter-content p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;float:left;line-height:0.85;margin:0.05em 0.15em 0 0;color:var(--rouge-braise)}
-        .chapter-navigation{margin-top:6rem;padding:4rem 0;border-top:3px solid var(--beige-papier);border-bottom:3px solid var(--beige-papier);background:linear-gradient(135deg,rgba(184,147,95,0.05) 0%,rgba(139,58,58,0.05) 100%)}
+        .chapter-navigation{background:linear-gradient(135deg,rgba(184,147,95,0.08) 0%,rgba(139,58,58,0.08) 100%);padding:5rem 2rem;border-top:3px solid var(--beige-papier)}
+        .nav-container{max-width:900px;margin:0 auto}
         .nav-title{font-family:'Montserrat',sans-serif;font-size:0.9rem;letter-spacing:2px;color:var(--or-ancien);text-transform:uppercase;font-weight:700;text-align:center;margin-bottom:2.5rem}
-        .nav-buttons{display:grid;grid-template-columns:1fr 1fr;gap:2rem;max-width:800px;margin:0 auto}
+        .nav-buttons{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
         .nav-btn{display:flex;flex-direction:column;padding:2rem 2.5rem;background:white;border:2px solid var(--beige-papier);text-decoration:none;transition:all 0.4s ease;position:relative;overflow:hidden}
         .nav-btn::before{content:'';position:absolute;top:0;left:0;width:100%;height:0;background:var(--rouge-braise);transition:height 0.4s ease;z-index:0}
         .nav-btn:hover::before{height:100%}
@@ -38,9 +39,9 @@
         .nav-btn:hover .nav-btn-label,.nav-btn:hover .nav-btn-title{color:white}
         .nav-btn-label{font-family:'Montserrat',sans-serif;font-size:0.75rem;letter-spacing:2px;color:var(--or-ancien);text-transform:uppercase;font-weight:700;margin-bottom:0.8rem;transition:color 0.3s ease}
         .nav-btn-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--noir-profond);line-height:1.3;transition:color 0.3s ease}
-        footer{background:var(--noir-profond);color:var(--blanc-casse);padding:3rem 2rem;text-align:center;margin-top:4rem}
+        footer{background:var(--noir-profond);color:var(--blanc-casse);padding:3rem 2rem;text-align:center}
         .footer-text{font-family:'Montserrat',sans-serif;font-size:0.85rem;opacity:0.7}
-        @media(max-width:768px){nav .container{padding:0 1.5rem}.nav-links{display:none}.logo{font-size:1rem}.chapter-wrapper{padding:120px 1.5rem 3rem}.chapter-content{font-size:1.1rem}.chapter-content p{text-align:left}.nav-buttons{grid-template-columns:1fr;gap:1.5rem}.nav-btn{padding:1.5rem}.nav-btn-title{font-size:1.2rem}}
+        @media(max-width:768px){nav .container{padding:0 1.5rem}.nav-links{display:none}.logo{font-size:1rem}.chapter-wrapper{padding:120px 1.5rem 1.5rem}.chapter-content{font-size:1.1rem}.chapter-content p{text-align:left}.nav-buttons{grid-template-columns:1fr;gap:1.5rem}.nav-btn{padding:1.5rem}.nav-btn-title{font-size:1.2rem}}
     </style>
 </head>
 <body>
@@ -72,8 +73,15 @@
 
             <p>Assumer ma part de responsabilité, ce n'était pas l'excuser, c'était reprendre les commandes. On ne peut pas réparer un homme qui se voit uniquement comme une victime. J'ai décidé que si je devais reconstruire un empire, les fondations seraient cette fois-ci faites de vérité, pas de non-dits.</p>
         </div>
+    </article>
 
-        <nav class="chapter-navigation">
+    <div style="max-width:800px;margin:3rem auto;padding:0 2rem">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9862184570673107" data-ad-slot="8542430499" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+    </div>
+
+    <section class="chapter-navigation">
+        <div class="nav-container">
             <h2 class="nav-title">Continuer la lecture</h2>
             <div class="nav-buttons">
                 <a href="chapitre-4.html" class="nav-btn">
@@ -85,13 +93,8 @@
                     <div class="nav-btn-title">L'Art du Détachement</div>
                 </a>
             </div>
-        </nav>
-    </article>
-
-    <div style="max-width:800px;margin:3rem auto;padding:0 2rem">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9862184570673107" data-ad-slot="8542430499" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
-    </div>
+        </div>
+    </section>
 
     <footer>
         <p class="footer-text">&copy; 2026 Du Chaos à la Clarté - Flo | Tous droits réservés</p>
