@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Chaos à la Clarté : Guide de Résilience Paternelle | Flo</title>
+    <meta name="description" content="L'histoire authentique d'un père de 30 ans qui a reconstruit sa vie après une trahison. Un témoignage brut sur la résilience, le détachement et la reconstruction paternelle.">
+    <meta name="keywords" content="résilience paternelle, reconstruction après divorce, infidélité, père séparé, témoignage divorce, sortir de la trahison, détachement émotionnel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f7f4;
+            --accent-gold: #c9a961;
+            --accent-rust: #a85741;
+            --text-dark: #2d2d2d;
+            --text-muted: #6b6b6b;
+            --border-subtle: #e5e3dd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 247, 244, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-rust);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, #f8f7f4 0%, #ebe8e0 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(168, 87, 65, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--accent-rust);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: var(--accent-rust);
+            color: white;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(168, 87, 65, 0.2);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(168, 87, 65, 0.3);
+        }
+
+        /* About Section */
+        .about {
+            padding: 8rem 2rem;
+            background: white;
+        }
+
+        .about .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--primary-dark);
+        }
+
+        .about-text {
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .quote {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 2rem;
+            margin: 3rem 0;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        /* Chapters Preview */
+        .chapters {
+            padding: 8rem 2rem;
+            background: var(--primary-light);
+        }
+
+        .chapters .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .chapter-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 2px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s;
+            border-top: 3px solid transparent;
+            text-decoration: none;
+            display: block;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-top-color: var(--accent-rust);
+        }
+
+        .chapter-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .chapter-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .chapter-excerpt {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .chapter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about, .chapters {
+                padding: 4rem 1.5rem;
+            }
+        }
+
+        /* AdSense Placeholder Styles */
+        .ad-placeholder {
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            font-family: 'Inter', sans-serif;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">DU CHAOS À LA CLARTÉ</a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#chapters">Chapitres</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Du Chaos à la Clarté</h1>
+            <p class="subtitle">Guide de Résilience Paternelle</p>
+            <p class="description">
+                L'histoire vraie d'un homme de 30 ans qui a reconstruit sa vie après une trahison. 
+                Un témoignage brut sur la reconstruction, le détachement et la force paternelle.
+            </p>
+            <a href="chapitre-1.html" class="cta-button">Commencer la lecture</a>
+        </div>
+    </section>
+
+    <!-- AdSense Placement 1 - Above the fold alternative position -->
+    <div class="ad-placeholder">
+        <p>📢 EMPLACEMENT ADSENSE #1</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+            Coller ici votre code Google AdSense<br>
+            (Format : Display responsive)
+        </p>
+    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Un témoignage qui libère</h2>
+            <p class="about-text">
+                Je m'appelle Flo. À 30 ans, après 14 ans de relation, deux enfants, et une vie que je pensais 
+                solidement ancrée, tout s'est effondré. L'infidélité, le retour chez mes parents, la reconstruction 
+                depuis zéro.
+            </p>
+            <p class="about-text">
+                Ce site n'est pas qu'un témoignage. C'est un guide de survie pour tous ceux qui traversent 
+                l'enfer de la trahison, du divorce, de la séparation. Pour les pères qui se demandent comment 
+                rester dignes face à la tempête.
+            </p>
+            <div class="quote">
+                "Le silence est ta seule armure. En te taisant, tu reprends le pouvoir que la trahison t'a volé."
+            </div>
+            <p class="about-text">
+                Entre janvier et mai 2026, j'ai transformé ma chute en laboratoire de résilience. 
+                J'ai appris que la reconstruction n'est pas un long fleuve tranquille, mais une bataille 
+                quotidienne contre soi-même. Et j'ai gagné.
+            </p>
+        </div>
+    </section>
+
+    <!-- AdSense Placement 2 - Between sections -->
+    <div class="ad-placeholder">
+        <p>📢 EMPLACEMENT ADSENSE #2</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+            Coller ici votre code Google AdSense<br>
+            (Format : Display responsive ou In-feed)
+        </p>
+    </div>
+
+    <section id="chapters" class="chapters">
+        <div class="container">
+            <h2 class="section-title">Les 7 Chapitres de la Reconstruction</h2>
+            
+            <div class="chapter-grid">
+                <a href="chapitre-1.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 1</div>
+                    <h3 class="chapter-title">L'Héritage des Silences</h3>
+                    <p class="chapter-excerpt">
+                        Né en 1997, fratrie de quatre garçons, premier amour à 14 ans. 
+                        Les fondations d'une vie que je croyais indestructible.
+                    </p>
+                </a>
+
+                <a href="chapitre-2.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 2</div>
+                    <h3 class="chapter-title">Les Sommets et les Mirages</h3>
+                    <p class="chapter-excerpt">
+                        À 19 ans, emménagement contre l'avis parental. Le mariage, la paternité, 
+                        l'exil vers le Sud. Les illusions du bonheur parfait.
+                    </p>
+                </a>
+
+                <a href="chapitre-3.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 3</div>
+                    <h3 class="chapter-title">La Cassure Invisible</h3>
+                    <p class="chapter-excerpt">
+                        2024 : retour aux études, horaires incompatibles, distance émotionnelle. 
+                        L'avortement, la fuite dans le travail, la chute.
+                    </p>
+                </a>
+
+                <a href="chapitre-4.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 4</div>
+                    <h3 class="chapter-title">L'Onde de Choc et le Silence de Fer</h3>
+                    <p class="chapter-excerpt">
+                        Noël. L'infidélité. L'atomisation du monde. Le retour chez mes parents 
+                        et la décision qui a tout changé : le silence absolu.
+                    </p>
+                </a>
+
+                <a href="chapitre-5.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 5</div>
+                    <h3 class="chapter-title">Le Laboratoire de la Vérité</h3>
+                    <p class="chapter-excerpt">
+                        L'autopsie sans anesthésie. Assumer ma part de responsabilité. 
+                        Comprendre le terreau de la trahison pour mieux me reconstruire.
+                    </p>
+                </a>
+
+                <a href="chapitre-6.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 6</div>
+                    <h3 class="chapter-title">L'Art du Détachement</h3>
+                    <p class="chapter-excerpt">
+                        La guerre des petits détails. Transformer chaque interaction en démonstration 
+                        de force tranquille. Le vide qui devient mon arme fatale.
+                    </p>
+                </a>
+
+                <a href="chapitre-7.html" class="chapter-card">
+                    <div class="chapter-number">CHAPITRE 7</div>
+                    <h3 class="chapter-title">La Renaissance et le Droit de Vivre</h3>
+                    <p class="chapter-excerpt">
+                        Réapprendre à respirer. Sortir, rencontrer, exister. 
+                        La page blanche que j'écris avec l'encre de mes échecs transformés en victoires.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Placement 3 - Before footer -->
+    <div class="ad-placeholder">
+        <p>📢 EMPLACEMENT ADSENSE #3</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+            Coller ici votre code Google AdSense<br>
+            (Format : Display responsive)
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Du Chaos à la Clarté - Flo | Tous droits réservés</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">
+            Ce témoignage est basé sur des événements réels. Les noms ont été modifiés pour protéger la vie privée.
+        </p>
+    </footer>
+
+    <!-- Google Analytics - À remplacer par votre ID -->
+    <script>
+        // Remplacez 'G-XXXXXXXXXX' par votre ID Google Analytics
+        // window.dataLayer = window.dataLayer || [];
+        // function gtag(){dataLayer.push(arguments);}
+        // gtag('js', new Date());
+        // gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</body>
+</html>

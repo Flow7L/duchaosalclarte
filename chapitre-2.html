@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 2 : Les Sommets et les Mirages | Du Chaos à la Clarté</title>
+    <meta name="description" content="À 19 ans, emménagement contre l'avis parental. Le mariage, la paternité, l'exil vers le Sud. Les illusions du bonheur parfait.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f7f4;
+            --accent-gold: #c9a961;
+            --accent-rust: #a85741;
+            --text-dark: #2d2d2d;
+            --text-muted: #6b6b6b;
+            --border-subtle: #e5e3dd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Pro', serif;
+            background: var(--primary-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 247, 244, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-rust);
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 120px auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .chapter-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .chapter-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+        }
+
+        .chapter-content {
+            font-size: 1.25rem;
+            line-height: 2;
+            color: var(--text-dark);
+        }
+
+        .chapter-content p {
+            margin-bottom: 2rem;
+        }
+
+        .chapter-content p:first-letter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.8;
+            margin: 0.1em 0.1em 0 0;
+            color: var(--accent-rust);
+        }
+
+        .ad-placeholder {
+            background: #f0f0f0;
+            border: 2px dashed #ccc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            font-family: 'Inter', sans-serif;
+            color: #888;
+        }
+
+        .chapter-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--accent-rust);
+            color: white;
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        .nav-button:hover {
+            background: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .nav-button.prev:hover {
+            transform: translateX(-5px);
+        }
+
+        footer {
+            background: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+            }
+
+            .chapter-container {
+                margin-top: 100px;
+                padding: 0 1.5rem;
+            }
+
+            .chapter-content {
+                font-size: 1.1rem;
+            }
+
+            .chapter-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">DU CHAOS À LA CLARTÉ</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#chapters">Chapitres</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="chapter-container">
+        <header class="chapter-header">
+            <div class="chapter-number">CHAPITRE 2</div>
+            <h1 class="chapter-title">Les Sommets et les Mirages</h1>
+        </header>
+
+        <div class="chapter-content">
+            <p>À 19 ans, contre l'avis de mes parents qui s'inquiétaient pour mes études, nous avons emménagé ensemble. C'était le temps de l'insouciance, des appartements trop petits et des fins de mois difficiles où une simple promenade en ville devenait une aventure. À 21 ans, nous avons tout plaqué pour la montagne. Notre rêve de neige.</p>
+
+            <!-- AdSense Placement - Mid-content -->
+            <div class="ad-placeholder">
+                <p>📢 EMPLACEMENT ADSENSE</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                    Coller ici votre code Google AdSense<br>
+                    (Format : In-article responsive)
+                </p>
+            </div>
+
+            <p>C'est là, entre deux sommets, que j'ai fait ma demande. Sous la douche, dans l'intimité brute, puis confirmée au bord d'un lac avec nos chiens pour seuls témoins. Le mariage s'est organisé dans une tension électrique avec sa famille, mais rien n'égalait la nouvelle reçue deux mois avant le grand jour : j'allais être père.</p>
+
+            <p>Le Covid a transformé la naissance de mon fils en une épreuve solitaire, mais ces deux années passées au chômage à m'occuper de lui ont été les plus belles de ma vie de père. Puis, l'annonce de la deuxième grossesse. Ma femme voulait profiter de sa fille comme j'avais profité de mon fils. J'ai alors fait le choix de la sécurité pour elle, une erreur que j'assume aujourd'hui : l'exil vers le Sud, loin de nos repères, pour que je puisse subvenir seul aux besoins de mon clan.</p>
+        </div>
+
+        <nav class="chapter-navigation">
+            <a href="chapitre-1.html" class="nav-button prev">
+                ← Chapitre précédent
+            </a>
+            <a href="chapitre-3.html" class="nav-button">
+                Chapitre suivant →
+            </a>
+        </nav>
+    </article>
+
+    <div class="ad-placeholder" style="max-width: 800px; margin: 3rem auto;">
+        <p>📢 EMPLACEMENT ADSENSE</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+            Coller ici votre code Google AdSense<br>
+            (Format : Display responsive)
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Du Chaos à la Clarté - Flo | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
