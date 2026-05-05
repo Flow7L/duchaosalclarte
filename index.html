@@ -3,40 +3,462 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Du Chaos à la Clarté : Guide de Résilience Paternelle</title>
-    <meta name="description" content="L'histoire authentique d'un père de 30 ans qui a reconstruit sa vie après une trahison.">
+    <title>Du Chaos à la Clarté - L'histoire de Flo</title>
+    <meta name="description" content="À 30 ans, ramasser les morceaux de sa vie pour en bâtir une nouvelle. L'histoire vraie d'un homme qui a transformé la trahison en renaissance.">
     <meta name="google-adsense-account" content="ca-pub-9862184570673107">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862184570673107" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862184570673107"
+     crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --noir-profond: #0a0a0a;
+            --blanc-casse: #faf8f5;
+            --or-ancien: #b8935f;
+            --rouge-braise: #8b3a3a;
+            --gris-pierre: #3d3d3d;
+            --gris-doux: #8a8a8a;
+            --beige-papier: #e8e4dd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: var(--blanc-casse);
+            color: var(--noir-profond);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 245, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid var(--beige-papier);
+            z-index: 1000;
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--noir-profond);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--rouge-braise);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gris-pierre);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--rouge-braise);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--rouge-braise);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--noir-profond) 0%, var(--gris-pierre) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(184, 147, 95, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 58, 58, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            color: var(--or-ancien);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            animation: fadeInUp 1.2s ease-out 0.2s backwards;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            color: var(--blanc-casse);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+            animation: fadeInUp 1.2s ease-out 0.4s backwards;
+        }
+
+        .hero-description {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: rgba(250, 248, 245, 0.85);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            animation: fadeInUp 1.2s ease-out 0.6s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--rouge-braise);
+            color: var(--blanc-casse);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 30px rgba(139, 58, 58, 0.4);
+            animation: fadeInUp 1.2s ease-out 0.8s backwards;
+        }
+
+        .cta-button:hover {
+            background: var(--or-ancien);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(184, 147, 95, 0.5);
+        }
+
+        /* Chapters Section */
+        .chapters-section {
+            padding: 8rem 2rem;
+            background: var(--blanc-casse);
+        }
+
+        .section-header {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            text-align: center;
+        }
+
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            color: var(--or-ancien);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--noir-profond);
+            line-height: 1.2;
+        }
+
+        .chapters-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .chapter-card {
+            background: white;
+            border: 2px solid var(--beige-papier);
+            padding: 3rem 2.5rem;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: var(--rouge-braise);
+            transition: height 0.4s ease;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: var(--or-ancien);
+        }
+
+        .chapter-card:hover::before {
+            height: 100%;
+        }
+
+        .chapter-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--or-ancien);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--noir-profond);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .chapter-excerpt {
+            font-size: 1rem;
+            color: var(--gris-doux);
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--noir-profond);
+            color: var(--blanc-casse);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            opacity: 0.7;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            nav .container {
+                padding: 0 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            .hero {
+                padding: 5rem 1.5rem;
+            }
+
+            .hero-title {
+                margin-bottom: 1.5rem;
+            }
+
+            .chapters-section {
+                padding: 5rem 1.5rem;
+            }
+
+            .chapters-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .chapter-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
         <div class="container">
-            <a href="index.html" class="logo">DU CHAOS À LA CLARTÉ</a>
+            <a href="index.html" class="logo">Du Chaos <span>à la</span> Clarté</a>
             <ul class="nav-links">
-                <li><a href="#chapitres">Chapitres</a></li>
+                <li><a href="#chapters">Chapitres</a></li>
+                <li><a href="#about">À propos</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="hero">
-        <h1>Du Chaos à la Clarté</h1>
-        <p class="subtitle">Guide de Résilience Paternelle</p>
-        <p class="description">
-            L'histoire vraie d'un homme de 30 ans qui a reconstruit sa vie après une trahison. 
-            Un témoignage brut sur la reconstruction, le détachement et la force paternelle.
-        </p>
-        <a href="chapitre-1.html" class="cta-button">Commencer la lecture</a>
+        <div class="hero-content">
+            <div class="hero-subtitle">Une Histoire Vraie</div>
+            <h1 class="hero-title">Du Chaos à la Clarté</h1>
+            <p class="hero-description">
+                À 30 ans, ramasser les morceaux de sa vie pour en bâtir une nouvelle. 
+                L'histoire d'un homme qui a transformé la trahison en renaissance.
+            </p>
+            <a href="#chapters" class="cta-button">Commencer la lecture</a>
+        </div>
     </section>
 
-    <div class="ad-section">
+    <section id="chapters" class="chapters-section">
+        <div class="section-header">
+            <div class="section-label">Les Sept Chapitres</div>
+            <h2 class="section-title">Le Parcours de Flo</h2>
+        </div>
+
+        <div class="chapters-grid">
+            <a href="chapitre-1.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 1</div>
+                <h3 class="chapter-card-title">L'Héritage des Silences</h3>
+                <p class="chapter-excerpt">
+                    Né en 1997, premier amour à 14 ans. Les fondations d'une vie que je croyais indestructible.
+                </p>
+            </a>
+
+            <a href="chapitre-2.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 2</div>
+                <h3 class="chapter-card-title">Les Sommets et les Mirages</h3>
+                <p class="chapter-excerpt">
+                    À 19 ans, emménagement contre l'avis parental. Le mariage, la paternité, l'exil vers le Sud.
+                </p>
+            </a>
+
+            <a href="chapitre-3.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 3</div>
+                <h3 class="chapter-card-title">La Cassure Invisible</h3>
+                <p class="chapter-excerpt">
+                    2024 : retour aux études, horaires incompatibles, distance émotionnelle. L'avortement, la fuite dans le travail.
+                </p>
+            </a>
+
+            <a href="chapitre-4.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 4</div>
+                <h3 class="chapter-card-title">L'Onde de Choc et le Silence de Fer</h3>
+                <p class="chapter-excerpt">
+                    Noël. L'infidélité. L'atomisation du monde. La décision qui a tout changé : le silence absolu.
+                </p>
+            </a>
+
+            <a href="chapitre-5.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 5</div>
+                <h3 class="chapter-card-title">Le Laboratoire de la Vérité</h3>
+                <p class="chapter-excerpt">
+                    L'autopsie sans anesthésie. Assumer ma part de responsabilité pour mieux me reconstruire.
+                </p>
+            </a>
+
+            <a href="chapitre-6.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 6</div>
+                <h3 class="chapter-card-title">L'Art du Détachement</h3>
+                <p class="chapter-excerpt">
+                    La guerre des petits détails. Transformer chaque interaction en démonstration de force tranquille.
+                </p>
+            </a>
+
+            <a href="chapitre-7.html" class="chapter-card">
+                <div class="chapter-number">Chapitre 7</div>
+                <h3 class="chapter-card-title">La Renaissance et le Droit de Vivre</h3>
+                <p class="chapter-excerpt">
+                    Réapprendre à respirer. Sortir, rencontrer, exister. La page blanche que j'écris avec mes échecs transformés en victoires.
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <!-- AdSense Placement -->
+    <div style="max-width: 800px; margin: 3rem auto; padding: 0 2rem;">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-9862184570673107"
-             data-ad-slot="8869733553"
+             data-ad-slot="8542430499"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
         <script>
@@ -44,83 +466,11 @@
         </script>
     </div>
 
-    <section id="chapitres" class="chapters">
-        <div class="container">
-            <h2 class="section-title">Les 7 Chapitres</h2>
-            
-            <div class="chapter-grid">
-                <a href="chapitre-1.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 1</div>
-                    <h3 class="chapter-title">L'Héritage des Silences</h3>
-                    <p class="chapter-excerpt">
-                        Né en 1997, fratrie de quatre garçons, premier amour à 14 ans.
-                    </p>
-                </a>
-
-                <a href="chapitre-2.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 2</div>
-                    <h3 class="chapter-title">Les Sommets et les Mirages</h3>
-                    <p class="chapter-excerpt">
-                        Emménagement à 19 ans, le mariage, la paternité, les premières fissures.
-                    </p>
-                </a>
-
-                <a href="chapitre-3.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 3</div>
-                    <h3 class="chapter-title">La Cassure Invisible</h3>
-                    <p class="chapter-excerpt">
-                        2024 : retour aux études, distance émotionnelle, la chute.
-                    </p>
-                </a>
-
-                <a href="chapitre-4.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 4</div>
-                    <h3 class="chapter-title">L'Onde de Choc</h3>
-                    <p class="chapter-excerpt">
-                        Noël. L'infidélité. Le retour chez mes parents. Le silence de fer.
-                    </p>
-                </a>
-
-                <a href="chapitre-5.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 5</div>
-                    <h3 class="chapter-title">Le Laboratoire de la Vérité</h3>
-                    <p class="chapter-excerpt">
-                        L'autopsie sans anesthésie. Comprendre sur quel terreau la tromperie a poussé.
-                    </p>
-                </a>
-
-                <a href="chapitre-6.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 6</div>
-                    <h3 class="chapter-title">L'Art du Détachement</h3>
-                    <p class="chapter-excerpt">
-                        La reconstruction dans les détails. Le détachement comme arme fatale.
-                    </p>
-                </a>
-
-                <a href="chapitre-7.html" class="chapter-card">
-                    <div class="chapter-number">CHAPITRE 7</div>
-                    <h3 class="chapter-title">La Renaissance</h3>
-                    <p class="chapter-excerpt">
-                        Aujourd'hui, je réapprends à respirer. Le futur est une page blanche.
-                    </p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="ad-section">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-format="autorelaxed"
-             data-ad-client="ca-pub-9862184570673107"
-             data-ad-slot="7221520674"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
     <footer>
-        <p>&copy; 2026 Du Chaos à la Clarté - Flo</p>
+        <div class="footer-content">
+            <h3 class="footer-title">Du Chaos à la Clarté</h3>
+            <p class="footer-text">&copy; 2026 Flo | Tous droits réservés</p>
+        </div>
     </footer>
 </body>
 </html>
